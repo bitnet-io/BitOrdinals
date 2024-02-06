@@ -2,8 +2,13 @@ import { HStack, styled } from 'leather-styles/jsx';
 
 import { ChevronDownIcon } from '@app/ui/components/icons/chevron-down-icon';
 
-const labels = ['Address', 'BNS Name'];
-const testLabels = ['address', 'bns-name'];
+//const labels = ['Address', 'BNS Name'];
+//const testLabels = ['address', 'bns-name'];
+
+
+const labels = ['Address'];
+const testLabels = ['address'];
+
 
 interface RecipientDropdownItemProps {
   index: number;

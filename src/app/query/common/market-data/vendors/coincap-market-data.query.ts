@@ -6,12 +6,12 @@ import { CryptoCurrencies } from '@shared/models/currencies.model';
 import { marketDataQueryOptions } from '../market-data.query';
 
 const currencyNameMap: Record<CryptoCurrencies, string> = {
-  BTC: 'bitcoin',
+  BIT: 'bitcoin',
   STX: 'stacks',
 };
 
 async function fetchCoincapMarketData(currency: CryptoCurrencies) {
-  const resp = await axios.get(`https://api.coincap.io/v2/assets/${currencyNameMap[currency]}`);
+//  const resp = await axios.get(`https://api.coincap.io/v2/assets/${currencyNameMap[currency]}`);
   return resp.data;
 }
 

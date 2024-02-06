@@ -26,12 +26,12 @@ export function BitcoinContractListItemLayout({
   txid,
 }: BitcoinContractListItemLayoutProps) {
   const { handleOpenBitcoinTxLink: handleOpenTxLink } = useBitcoinExplorerLink();
-  const bitcoinMarketData = useCryptoCurrencyMarketData('BTC');
+  const bitcoinMarketData = useCryptoCurrencyMarketData('BIT');
 
   const getFiatValue = useCallback(
     (value: string) =>
       i18nFormatCurrency(
-        baseCurrencyAmountInQuote(createMoneyFromDecimal(Number(value), 'BTC'), bitcoinMarketData)
+        baseCurrencyAmountInQuote(createMoneyFromDecimal(Number(value), 'BIT'), bitcoinMarketData)
       ),
     [bitcoinMarketData]
   );

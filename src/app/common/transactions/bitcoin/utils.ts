@@ -1,7 +1,8 @@
 import BigNumber from 'bignumber.js';
 import { getAddressInfo, validate } from 'bitcoin-address-validation';
+//import { getAddressInfo, validate } from 'repository';
 
-import { BTC_P2WPKH_DUST_AMOUNT } from '@shared/constants';
+import { BIT_P2WPKH_DUST_AMOUNT } from '@shared/constants';
 import {
   BitcoinTransactionVectorOutput,
   BitcoinTx,
@@ -60,7 +61,7 @@ export function filterUneconomicalUtxos({
   });
 
   const filteredUtxos = utxos
-    .filter(utxo => utxo.value >= BTC_P2WPKH_DUST_AMOUNT)
+    .filter(utxo => utxo.value >= BIT_P2WPKH_DUST_AMOUNT)
     .filter(utxo => {
       // calculate spendableAmount without that utxo.
       const { spendableAmount } = getSpendableAmount({

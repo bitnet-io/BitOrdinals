@@ -41,7 +41,7 @@ export function RpcSendTransferSummary() {
   const { onCopy } = useClipboard(txId);
 
   function onClickLink() {
-    void analytics.track('view_rpc_send_transfer_confirmation', { symbol: 'BTC' });
+    void analytics.track('view_rpc_send_transfer_confirmation', { symbol: 'BIT' });
     handleOpenTxLink(txLink);
   }
 

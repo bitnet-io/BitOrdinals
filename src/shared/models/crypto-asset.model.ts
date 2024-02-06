@@ -2,7 +2,7 @@ export interface BitcoinCryptoCurrencyAsset {
   decimals: number;
   hasMemo: boolean;
   name: string;
-  symbol: 'BTC';
+  symbol: 'BIT';
 }
 
 export interface StacksCryptoCurrencyAsset {

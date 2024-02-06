@@ -37,7 +37,7 @@ export function useGetAddresses() {
         const nativeSegwitSigner = createNativeSegwitSigner(0);
 
         const nativeSegwitAddressResponse: BtcAddress = {
-          symbol: 'BTC',
+          symbol: 'BIT',
           type: 'p2wpkh',
           address: nativeSegwitSigner.address,
           publicKey: bytesToHex(nativeSegwitSigner.publicKey),
@@ -50,7 +50,7 @@ export function useGetAddresses() {
       if (createTaprootSigner) {
         const taprootSigner = createTaprootSigner(0);
         const taprootAddressResponse: BtcAddress = {
-          symbol: 'BTC',
+          symbol: 'BIT',
           type: 'p2tr',
           address: taprootSigner.address,
           publicKey: bytesToHex(taprootSigner.publicKey),

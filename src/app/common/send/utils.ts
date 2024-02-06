@@ -1,3 +1,3 @@
 export function formFeeRowValue(feeRate: number, isCustomFee?: boolean) {
-  return `${isCustomFee ? '(Custom) ' : ''}${feeRate} sats/vB`;
+  return `${isCustomFee ? '(Custom) ' : ''}${feeRate} radiowaves/vB`;
 }

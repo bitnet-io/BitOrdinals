@@ -57,7 +57,7 @@ export interface BitcoinContractOfferDetails {
 export function useBitcoinContracts() {
   const navigate = useNavigate();
   const defaultParams = useDefaultRequestParams();
-  const bitcoinMarketData = useCryptoCurrencyMarketData('BTC');
+  const bitcoinMarketData = useCryptoCurrencyMarketData('BIT');
   const calculateFiatValue = useCalculateBitcoinFiatValue();
 
   const bitcoinAccountDetails = useCurrentAccountNativeSegwitIndexZeroSigner();
@@ -231,7 +231,7 @@ export function useBitcoinContracts() {
 
   function getTransactionDetails(txId: string, bitcoinCollateral: number) {
     const bitcoinValue = satToBtc(bitcoinCollateral);
-    const txMoney = createMoneyFromDecimal(bitcoinValue, 'BTC');
+    const txMoney = createMoneyFromDecimal(bitcoinValue, 'BIT');
     const txFiatValue = i18nFormatCurrency(calculateFiatValue(txMoney)).toString();
     const txFiatValueSymbol = bitcoinMarketData.price.symbol;
     const txLink = { blockchain: 'bitcoin', txid: txId };
@@ -241,7 +241,7 @@ export function useBitcoinContracts() {
       txMoney,
       txFiatValue,
       txFiatValueSymbol,
-      symbol: 'BTC',
+      symbol: 'BIT',
       txLink,
     };
   }
@@ -249,14 +249,14 @@ export function useBitcoinContracts() {
   async function sumBitcoinContractCollateralAmounts(): Promise<Money> {
     let bitcoinContractsCollateralSum = 0;
     const bitcoinContracts = await getAllActiveBitcoinContracts();
-    if (!bitcoinContracts) return createMoneyFromDecimal(0, 'BTC');
+    if (!bitcoinContracts) return createMoneyFromDecimal(0, 'BIT');
 
     bitcoinContracts.forEach((bitcoinContract: BitcoinContractListItem) => {
       bitcoinContractsCollateralSum += parseInt(bitcoinContract.acceptorCollateral);
     });
     const bitcoinContractCollateralSumMoney = createMoneyFromDecimal(
       satToBtc(bitcoinContractsCollateralSum),
-      'BTC'
+      'BIT'
     );
 
     return bitcoinContractCollateralSumMoney;

@@ -49,7 +49,7 @@ export function ConnectLedger(props: ConnectLedgerProps) {
     const showBothBtns = showBitcoinConnectButton && showStacksConnectButton;
     return [
       '1. Connect & unlock your Ledger',
-      `2. Open${showBitcoinConnectButton ? ' Bitcoin' : ''} ${showBothBtns ? 'or' : ''} ${
+      `2. Open${showBitcoinConnectButton ? ' Bitnet IO' : ''} ${showBothBtns ? 'or' : ''} ${
         showStacksConnectButton ? 'Stacks' : ''
       } app`,
       '3. Click the button below',
@@ -82,7 +82,7 @@ export function ConnectLedger(props: ConnectLedgerProps) {
             >
               <HStack gap="space.01">
                 <BtcLedgerIcon />
-                <styled.span textStyle="label.02">Connect Bitcoin</styled.span>
+                <styled.span textStyle="label.02">Connect Bitnet IO</styled.span>
               </HStack>
             </Button>
           )}

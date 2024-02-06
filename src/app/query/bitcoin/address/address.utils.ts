@@ -1,4 +1,4 @@
-import { BTC_DECIMALS } from '@shared/constants';
+import { BIT_DECIMALS } from '@shared/constants';
 import { BitcoinCryptoCurrencyAssetBalance } from '@shared/models/crypto-asset-balance.model';
 import type { Money } from '@shared/models/money.model';
 import { isEmptyArray } from '@shared/utils';
@@ -12,10 +12,10 @@ export function createBitcoinCryptoCurrencyAssetTypeWrapper(
     blockchain: 'bitcoin',
     balance,
     asset: {
-      decimals: BTC_DECIMALS,
+      decimals: BIT_DECIMALS,
       hasMemo: true,
-      name: 'Bitcoin',
-      symbol: 'BTC',
+      name: 'Bitnet IO',
+      symbol: 'BIT',
     },
     type: 'crypto-currency',
   };

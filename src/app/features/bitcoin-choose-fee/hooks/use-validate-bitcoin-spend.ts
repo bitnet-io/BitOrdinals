@@ -12,7 +12,7 @@ export function useValidateBitcoinSpend(amount?: Money, isSendingMax?: boolean) 
   return {
     showInsufficientBalanceError,
     onValidateBitcoinFeeSpend(feeValue: number) {
-      const feeAsMoney = createMoney(feeValue, 'BTC');
+      const feeAsMoney = createMoney(feeValue, 'BIT');
 
       if (feeAsMoney.amount.isGreaterThan(balance.amount)) {
         setShowInsufficientBalanceError(true);
@@ -21,7 +21,7 @@ export function useValidateBitcoinSpend(amount?: Money, isSendingMax?: boolean) 
       return true;
     },
     onValidateBitcoinAmountSpend(feeValue: number) {
-      const feeAsMoney = createMoney(feeValue, 'BTC');
+      const feeAsMoney = createMoney(feeValue, 'BIT');
 
       if (!amount) {
         throw new Error('Amount should be defined to validate total spend');

@@ -29,7 +29,7 @@ export function LockBitcoinSummary() {
   const analytics = useAnalytics();
 
   function onClickLink() {
-    void analytics.track('view_transaction_confirmation', { symbol: 'BTC' });
+    void analytics.track('view_transaction_confirmation', { symbol: 'BIT' });
     handleOpenTxLink(txLink);
   }
 
@@ -38,7 +38,7 @@ export function LockBitcoinSummary() {
     toast.success('ID copied!');
   }
 
-  useRouteHeader(<ModalHeader hideActions defaultClose title="Locked Bitcoin" />);
+  useRouteHeader(<ModalHeader hideActions defaultClose title="Locked Bitnet IO" />);
 
   return (
     <InfoCard>
@@ -52,7 +52,7 @@ export function LockBitcoinSummary() {
         value={Number(satToBtc(txMoney.amount))}
       />
       <styled.span textStyle="body.02" p="space.05" textAlign="justify">
-        <b>Success!</b> Your bitcoin has been locked securely. All that's left is for it to be
+        <b>Success!</b> Your Bitnet has been locked securely. All that's left is for it to be
         confirmed on the blockchain. After confirmation, you can proceed with borrowing against it.
       </styled.span>
       <InfoCardFooter>

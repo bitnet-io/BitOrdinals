@@ -55,7 +55,7 @@ export function useCryptoCurrencyMarketData(currency: CryptoCurrencies): MarketD
 }
 
 export function useCalculateBitcoinFiatValue() {
-  const btcMarketData = useCryptoCurrencyMarketData('BTC');
+  const btcMarketData = useCryptoCurrencyMarketData('BIT_');
 
   return useCallback(
     (value: Money) => baseCurrencyAmountInQuote(value, btcMarketData),

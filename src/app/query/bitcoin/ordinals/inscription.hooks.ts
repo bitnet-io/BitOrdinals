@@ -8,11 +8,11 @@ import {
 import { useGetInscriptionQuery } from './inscription.query';
 
 export function createInscriptionInfoUrl(id: string) {
-  return `https://ordinals.hiro.so/inscription/${id}`;
+  return `https://bitnft.io/inscription/${id}`;
 }
 
 function createIframePreviewUrl(id: string) {
-  return `https://ordinals.com/preview/${id}`;
+  return `https://bitnft.io/preview/${id}`;
 }
 
 export function convertInscriptionToSupportedInscriptionType(inscription: Inscription) {

@@ -6,7 +6,7 @@ describe('Bitcoin bech32 (P2WPKH address derivation', () => {
       {
         path: "m/84'/0'/0'",
         extended_public_key:
-          'xpub6CwY13JDrzeY2oWjP9dbiyLHQh3JVWCvBTCfD7WREBUpBUmtCu4bgxfSGrvaLDbZaMdw2nsPeTFv6AokWkVqh4rbKpsxg7GgEu543Qwvyff',
+          'xpub6CwY13JDrzeY2oWjP9dbiyLHQh3JVWCvBITfD7WREBUpBUmtCu4bgxfSGrvaLDbZaMdw2nsPeTFv6AokWkVqh4rbKpsxg7GgEu543Qwvyff',
         private_key: 'L1FA9VHZNkgCBW9fS76zDHcjuK72LE4gGVAMnN67onRRCoDJvZJi',
         public_key: '0211758b68eb9b0e4e9610c49739f2ce039732033ba47e125bbdf64ef6cd586ef3',
         zeroIndexChildAddress: 'bc1qa4ypkks2kfpawyy5mautjfqc6wv703ckm7puux',

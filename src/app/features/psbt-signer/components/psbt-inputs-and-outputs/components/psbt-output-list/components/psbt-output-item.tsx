@@ -18,7 +18,7 @@ export function PsbtOutputItem({ output }: { output: PsbtOutput }) {
     <PsbtInputOutputItemLayout
       address={truncateMiddle(output.address)}
       addressHoverLabel={output.address}
-      amount={formatMoney(createMoney(Number(output.value), 'BTC'))}
+      amount={formatMoney(createMoney(Number(output.value), 'BIT'))}
       label={output.toSign ? <Pill hoverLabel={pillHoverLabel} label="You" /> : undefined}
     />
   );

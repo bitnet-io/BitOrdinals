@@ -10,7 +10,7 @@ import { PsbtOutput } from './use-parsed-outputs';
 function calculateAddressInputsTotal(address: string, inputs: PsbtInput[]) {
   return createMoney(
     sumNumbers(inputs.filter(input => input.address === address).map(input => input.value)),
-    'BTC'
+    'BIT'
   );
 }
 
@@ -19,16 +19,16 @@ function calculateAddressOutputsTotal(address: string, outputs: PsbtOutput[]) {
     sumNumbers(
       outputs.filter(output => output.address === address).map(output => Number(output.value))
     ),
-    'BTC'
+    'BIT'
   );
 }
 
 function calculatePsbtInputsTotal(inputs: PsbtInput[]) {
-  return createMoney(sumNumbers(inputs.map(input => input.value)), 'BTC');
+  return createMoney(sumNumbers(inputs.map(input => input.value)), 'BIT');
 }
 
 function calculatePsbtOutputsTotal(outputs: PsbtOutput[]) {
-  return createMoney(sumNumbers(outputs.map(output => output.value)), 'BTC');
+  return createMoney(sumNumbers(outputs.map(output => output.value)), 'BIT');
 }
 
 interface UsePsbtTotalsProps {

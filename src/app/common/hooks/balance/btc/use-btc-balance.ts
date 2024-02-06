@@ -7,7 +7,7 @@ import { useNativeSegwitBalance } from '@app/query/bitcoin/balance/btc-native-se
 import { useCryptoCurrencyMarketData } from '@app/query/common/market-data/market-data.hooks';
 
 export function useBtcAssetBalance(btcAddress: string) {
-  const btcMarketData = useCryptoCurrencyMarketData('BTC');
+  const btcMarketData = useCryptoCurrencyMarketData('BIT');
   const btcAssetBalance = useNativeSegwitBalance(btcAddress);
 
   return useMemo(

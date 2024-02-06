@@ -69,7 +69,7 @@ export function SendInscriptionReview() {
       <Box px="space.06" mt="space.06">
         <InscriptionPreviewCard
           image={<InscriptionPreview inscription={inscription} />}
-          subtitle="Ordinal inscription"
+          subtitle="BitOrdinal inscription"
           title={inscription.title}
         />
       </Box>

@@ -34,16 +34,7 @@ export function CryptoAssetList({ cryptoAssetBalances, onItemClick }: CryptoAsse
           </BitcoinBalanceLoader>
         )}
       </BitcoinNativeSegwitAccountLoader>
-      {cryptoAssetBalances.map(cryptoAssetBalance => (
-        <CryptoAssetListItem
-          onClick={() => onItemClick(cryptoAssetBalance)}
-          assetBalance={cryptoAssetBalance}
-          key={
-            cryptoAssetBalance.asset.name ??
-            (cryptoAssetBalance.asset as StacksFungibleTokenAsset).contractAssetName
-          }
-        />
-      ))}
+
       {whenWallet({
         software: (
           <BitcoinNativeSegwitAccountLoader current>

@@ -44,7 +44,7 @@ export function BtcSentSummary() {
   const analytics = useAnalytics();
 
   function onClickLink() {
-    void analytics.track('view_transaction_confirmation', { symbol: 'BTC' });
+    void analytics.track('view_transaction_confirmation', { symbol: 'BIT' });
     handleOpenTxLink({ txid: txLink.txid });
   }
 

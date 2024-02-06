@@ -5,13 +5,9 @@ import { CryptoCurrencies } from '@shared/models/currencies.model';
 import { HasChildren } from '@app/common/has-children';
 
 const nameMap: Record<CryptoCurrencies, { name: string; symbol: string }> = {
-  BTC: {
-    name: 'Bitcoin',
-    symbol: 'BTC',
-  },
-  STX: {
-    name: 'Stacks',
-    symbol: 'STX',
+  BIT: {
+    name: 'Bitnet IO',
+    symbol: 'BIT',
   },
 };
 

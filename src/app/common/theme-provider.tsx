@@ -28,13 +28,13 @@ const ThemeContext = createContext<{
   setUserSelectedTheme(theme: UserSelectedTheme): void;
 }>({
   // These values are not used, but are set to satisfy the context's value type.
-  theme: 'light',
+  theme: 'dark',
   userSelectedTheme: 'system',
   setUserSelectedTheme: noop,
 });
 
 const getSystemTheme = () =>
-  window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'dark';
 
 function getComputedTheme(userSelectedTheme: UserSelectedTheme): ComputedTheme {
   if (userSelectedTheme === 'system') return getSystemTheme();

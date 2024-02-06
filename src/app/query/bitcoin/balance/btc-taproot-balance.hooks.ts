@@ -27,7 +27,7 @@ export function useCurrentTaprootAccountBalance() {
   const uninscribedUtxos = useCurrentTaprootAccountUninscribedUtxos();
 
   return useMemo(
-    () => createMoney(sumNumbers(uninscribedUtxos.map(utxo => Number(utxo.value))), 'BTC'),
+    () => createMoney(sumNumbers(uninscribedUtxos.map(utxo => Number(utxo.value))), 'BIT'),
     [uninscribedUtxos]
   );
 }

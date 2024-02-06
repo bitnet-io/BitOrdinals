@@ -16,7 +16,7 @@ interface UseTotalBalanceArgs {
 
 export function useTotalBalance({ btcAddress, stxAddress }: UseTotalBalanceArgs) {
   // get market data
-  const btcMarketData = useCryptoCurrencyMarketData('BTC');
+  const btcMarketData = useCryptoCurrencyMarketData('BIT');
   const stxMarketData = useCryptoCurrencyMarketData('STX');
 
   // get stx balance

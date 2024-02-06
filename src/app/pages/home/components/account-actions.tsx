@@ -41,25 +41,6 @@ export function AccountActions(props: FlexProps) {
         onClick={() => navigate(receivePath, { state: { backgroundLocation: location } })}
       />
 
-      {(!!stacksAccount || !!btcAccount) && (
-        <ActionButton
-          data-testid={HomePageSelectors.FundAccountBtn}
-          icon={<PlusIcon />}
-          label="Buy"
-          onClick={() => navigate(RouteUrls.FundChooseCurrency)}
-        />
-      )}
-      {whenStacksChainId(currentNetwork.chain.stacks.chainId)({
-        [ChainID.Mainnet]: (
-          <ActionButton
-            data-testid={HomePageSelectors.SwapBtn}
-            icon={<SwapIcon />}
-            label="Swap"
-            onClick={() => navigate(RouteUrls.Swap)}
-          />
-        ),
-        [ChainID.Testnet]: null,
-      })}
     </Flex>
   );
 }

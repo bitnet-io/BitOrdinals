@@ -42,12 +42,12 @@ export function SendInscriptionForm() {
             <Box display="flex" flexDirection="column" px="space.06" pb="space.04">
               <InscriptionPreviewCard
                 image={<InscriptionPreview inscription={inscription} />}
-                subtitle="Ordinal inscription"
+                subtitle="BitOrdinal inscription"
                 title={inscription.title}
               />
               <Box mt={['space.04', 'space.06', '100px']}>
                 <Flex flexDirection="column" mt="space.05" width="100%">
-                  <CollectibleAsset icon={<OrdinalIcon />} name="Ordinal inscription" />
+                  <CollectibleAsset icon={<OrdinalIcon />} name="BitOrdinal inscription" />
                   <RecipientField
                     name={recipeintFieldName}
                     label="To"

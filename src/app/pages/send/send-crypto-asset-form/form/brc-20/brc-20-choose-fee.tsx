@@ -69,7 +69,7 @@ export function BrcChooseFee() {
       const serviceFeeRecipient = charge.address;
       const serviceFee = charge.amount;
 
-      const serviceFeeAsMoney = createMoney(serviceFee, 'BTC');
+      const serviceFeeAsMoney = createMoney(serviceFee, 'BIT');
 
       const resp = await generateTx(
         {

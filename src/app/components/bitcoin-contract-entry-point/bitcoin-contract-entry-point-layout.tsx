@@ -32,7 +32,7 @@ export function BitcoinContractEntryPointLayout(props: BitcoinContractEntryPoint
     <Flex cursor={cursor} onClick={onClick} outline={0}>
       <Flag img={icon} spacing="space.04" width="100%">
         <HStack alignItems="center" justifyContent="space-between" width="100%">
-          <styled.span textStyle="label.01">Bitcoin Contracts</styled.span>
+          <styled.span textStyle="label.01">Bitnet IO Contracts</styled.span>
           <BasicTooltip
             label={formattedBalance.isAbbreviated ? balance.amount.toString() : undefined}
             side="left"

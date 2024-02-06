@@ -65,7 +65,7 @@ export function makeBitcoinTxExplorerLink({
   switch (bitcoinNetwork) {
     case 'mainnet':
     case 'testnet':
-      return `https://mempool.space/${
+      return `https://bitexplorer.io/${
         bitcoinNetwork !== 'mainnet' ? bitcoinNetwork + '/' : ''
       }tx/${txid}`;
     case 'regtest':

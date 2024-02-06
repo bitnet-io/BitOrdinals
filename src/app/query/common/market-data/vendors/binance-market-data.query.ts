@@ -7,13 +7,15 @@ import { marketDataQueryOptions } from '../market-data.query';
 
 async function fetchBinanceMarketData(currency: CryptoCurrencies) {
   const resp = await axios.get(
-    `https://api1.binance.com/api/v3/ticker/price?symbol=${currency}USDT`
+`https://api.xeggex.com/api/v2/market/getbysymbol/BIT_USDT`
+
   );
   return resp.data;
 }
 
 export function selectBinanceUsdPrice(resp: any) {
-  return resp?.price;
+//  return resp?.price;
+  return resp?.lastPrice;
 }
 
 export function useBinanceMarketDataQuery(currency: CryptoCurrencies) {

@@ -13,11 +13,11 @@ import {
 const tenMicroStx = createMoney(10, 'STX');
 const tenStx = createMoneyFromDecimal(10, 'STX');
 
-const tenBtc = createMoneyFromDecimal(10, 'BTC');
+const tenBtc = createMoneyFromDecimal(10, 'BIT');
 
 const mockWrongMarketData = {
-  pair: createMarketPair('BTC' as any, 'USD'),
-  price: createMoneyFromDecimal(1, 'EUR' as any, 2),
+  pair: createMarketPair('BIT' as any, 'USDT'),
+  price: createMoneyFromDecimal(1, 'EUR' as any, 8),
 } as MarketData;
 
 const mockAccurateStxMarketData = createMarketData(

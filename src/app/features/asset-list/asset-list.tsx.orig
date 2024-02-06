@@ -61,6 +61,10 @@ export function AssetsList() {
           ledger: null,
         })}
 
+      {/* Temporary duplication during Ledger Bitcoin feature dev */}
+<!--      <CurrentStacksAccountLoader fallback={<AddStacksLedgerKeysItem />}>
+       {account => <StacksAssetList account={account} />}
+      </CurrentStacksAccountLoader> -->
 
       {whenWallet({
         software: (

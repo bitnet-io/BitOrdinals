@@ -38,7 +38,7 @@ export function ReceiveBtcModal({ type = 'btc' }: ReceiveBtcModalType) {
     <ReceiveTokensLayout
       address={btcAddress}
       onCopyAddressToClipboard={copyToClipboard}
-      title={type === 'btc-stamp' ? 'BITCOIN STAMP' : 'BTC'}
+      title={type === 'btc-stamp' ? 'BITNET STAMP' : 'BIT'}
     />
   );
 }

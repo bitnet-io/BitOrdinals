@@ -4,7 +4,8 @@ import { StampsIcon } from '@app/ui/components/icons/stamps-icon';
 
 import { CollectibleImage } from '../_collectible-types/collectible-image';
 
-const stampChainAssetUrl = 'https://stampchain.io/asset.html?stampNumber=';
+//const stampChainAssetUrl = 'https://stampchain.io/asset.html?stampNumber=';
+const stampChainAssetUrl = '';
 
 export function Stamp(props: { bitcoinStamp: BitcoinStamp }) {
   const { bitcoinStamp } = props;
@@ -15,7 +16,7 @@ export function Stamp(props: { bitcoinStamp: BitcoinStamp }) {
       key={bitcoinStamp.stamp}
       onClickCallToAction={() => openInNewTab(`${stampChainAssetUrl}${bitcoinStamp.stamp}`)}
       src={bitcoinStamp.stamp_url}
-      subtitle="Bitcoin Stamp"
+      subtitle="Bitnet IO Stamp"
       title={`# ${bitcoinStamp.stamp}`}
     />
   );

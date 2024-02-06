@@ -94,11 +94,11 @@ export function AddNetwork() {
         break;
       case 'signet':
         setStacksUrl('https://api.testnet.hiro.so');
-        setBitcoinUrl('https://mempool.space/signet/api');
+        setBitcoinUrl('https://bitexplorer.io/signet/api');
         break;
       case 'regtest':
         setStacksUrl('https://api.testnet.hiro.so');
-        setBitcoinUrl('https://mempool.space/testnet/api');
+        setBitcoinUrl('https://bitexplorer.io/testnet/api');
         break;
     }
   }, [bitcoinApi, setStacksUrl, setBitcoinUrl]);
@@ -121,7 +121,7 @@ export function AddNetwork() {
           }
 
           if (!isValidUrl(bitcoinUrl)) {
-            setError('Enter a valid Bitcoin API URL');
+            setError('Enter a valid Bitnet IO API URL');
             return;
           }
 
@@ -220,7 +220,7 @@ export function AddNetwork() {
                 </a>{' '}
                 or{' '}
                 <a href="https://github.com/Blockstream/esplora" target="_blank" rel="noreferrer">
-                  Bitcoin Blockchain API
+                  Bitnet IO Blockchain API
                 </a>
                 . Make sure you review and trust the host before you add it.
               </styled.span>
@@ -235,7 +235,7 @@ export function AddNetwork() {
                   data-testid={NetworkSelectors.NetworkName}
                 />
               </Input.Root>
-              <Title>Bitcoin API</Title>
+              <Title>Bitnet IO API</Title>
               {/* TODO: Replace with new Select */}
               <SelectRoot onValueChange={handleApiChange} defaultValue="mainnet">
                 <SelectTrigger
@@ -280,9 +280,9 @@ export function AddNetwork() {
                   data-testid={NetworkSelectors.NetworkStacksAddress}
                 />
               </Input.Root>
-              <Title>Bitcoin API URL</Title>
+              <Title>Bitnet IO API URL</Title>
               <Input.Root>
-                <Input.Label>Bitcoin API URL</Input.Label>
+                <Input.Label>Bitnet IO API URL</Input.Label>
                 <Input.Field
                   onChange={formikProps.handleChange}
                   name="bitcoinUrl"

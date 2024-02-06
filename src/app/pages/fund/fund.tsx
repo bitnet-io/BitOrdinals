@@ -22,26 +22,16 @@ export function FundPage() {
   const stxCryptoCurrencyAssetBalance = useStxCryptoCurrencyAssetBalance();
   const { currency } = useParams();
 
-  function getSymbol() {
-    if (isCryptoCurrency(currency)) {
-      return currency;
-    }
-    return 'STX';
-  }
   function getAddress() {
     switch (symbol) {
-      case 'BTC':
+      case 'BIT':
         return bitcoinSigner?.address;
-      case 'STX':
-        return currentStxAccount?.address;
     }
   }
   function getBalance() {
     switch (symbol) {
-      case 'BTC':
+      case 'BIT':
         return btcCryptoCurrencyAssetBalance;
-      case 'STX':
-        return stxCryptoCurrencyAssetBalance;
     }
   }
 

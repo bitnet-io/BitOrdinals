@@ -23,7 +23,7 @@ import { SendTransferActions } from './components/send-transfer-actions';
 import { SendTransferConfirmationDetails } from './components/send-transfer-confirmation-details';
 import { useRpcSendTransferRequestParams } from './use-rpc-send-transfer';
 
-const symbol: CryptoCurrencies = 'BTC';
+const symbol: CryptoCurrencies = 'BIT';
 
 function useRpcSendTransferConfirmationState() {
   const location = useLocation();
@@ -44,7 +44,7 @@ export function RpcSendTransferConfirmation() {
   const bitcoinAddress = useCurrentAccountNativeSegwitAddressIndexZero();
   const { broadcastTx, isBroadcasting } = useBitcoinBroadcastTransaction();
   const { refetch } = useCurrentNativeSegwitUtxos();
-  const btcMarketData = useCryptoCurrencyMarketData('BTC');
+  const btcMarketData = useCryptoCurrencyMarketData('BIT');
 
   const psbt = decodeBitcoinTx(tx);
   const transferAmount = satToBtc(psbt.outputs[0].amount.toString()).toString();

@@ -17,7 +17,7 @@ export function useGetBitcoinBalanceByAddress(address: string) {
   });
 
   return useMemo(() => {
-    if (isUndefined(utxos)) return createMoney(new BigNumber(0), 'BTC');
-    return createMoney(sumNumbers(utxos.map(utxo => utxo.value)), 'BTC');
+    if (isUndefined(utxos)) return createMoney(new BigNumber(0), 'BIT');
+    return createMoney(sumNumbers(utxos.map(utxo => utxo.value)), 'BIT');
   }, [utxos]);
 }

@@ -47,7 +47,7 @@ export function useSendInscriptionForm() {
 
         if (!resp) {
           setShowError(
-            'Insufficient funds to cover fee. Deposit some BTC to your Native Segwit address.'
+            'Insufficient funds to cover fee. Deposit some BIT to your Native Segwit address.'
           );
           return;
         }

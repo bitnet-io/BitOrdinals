@@ -78,27 +78,5 @@ export const sendCryptoAssetFormRoutes = (
       <Route path={RouteUrls.SentBrc20Summary} element={<Brc20SentSummary />} />
     </Route>
 
-    <Route path={RouteUrls.SendCryptoAssetForm.replace(':symbol', 'stx')} element={<StxSendForm />}>
-      {broadcastErrorDrawerRoute}
-      {editNonceDrawerRoute}
-      {recipientAccountsDrawerRoute}
-    </Route>
-    <Route
-      path={`${RouteUrls.SendCryptoAssetForm.replace(':symbol', 'stx')}/confirm`}
-      element={<StacksSendFormConfirmation />}
-    >
-      {ledgerStacksTxSigningRoutes}
-    </Route>
-
-    <Route path={RouteUrls.SendSip10Form} element={<Sip10TokenSendForm />}>
-      {broadcastErrorDrawerRoute}
-      {editNonceDrawerRoute}
-      {recipientAccountsDrawerRoute}
-    </Route>
-    <Route path="/send/:symbol/:contractId/confirm" element={<StacksSendFormConfirmation />}>
-      {ledgerStacksTxSigningRoutes}
-    </Route>
-
-    <Route path={RouteUrls.SentStxTxSummary} element={<StxSentSummary />} />
   </Route>
 );

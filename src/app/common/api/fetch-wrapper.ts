@@ -22,11 +22,11 @@ function trackApiError(url: string, statusCode: number) {
 export async function wrappedFetch(input: RequestInfo, init: RequestInit = {}) {
   const initHeaders = init.headers || {};
   // eslint-disable-next-line no-restricted-globals
-  const resp = await fetch(input, {
-    ...init,
-    credentials: 'omit',
-    headers: { ...initHeaders, ...leatherHeaders },
-  });
+//  const resp = await fetch(input, {
+  //  ...init,
+ //   credentials: 'omit',
+ //   headers: { ...initHeaders, ...leatherHeaders },
+//  });
   if (isErrorCode(resp.status)) trackApiError(resp.url, resp.status);
   return resp;
 }

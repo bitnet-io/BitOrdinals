@@ -6,13 +6,13 @@ import { CryptoCurrencies } from '@shared/models/currencies.model';
 import { marketDataQueryOptions } from '../market-data.query';
 
 const currencyNameMap: Record<CryptoCurrencies, string> = {
-  BTC: 'bitcoin',
+  BIT: 'bitnet-io',
   STX: 'blockstack',
 };
 
 async function fetchCoingeckoMarketData(currency: CryptoCurrencies) {
   const resp = await axios.get(
-    `https://api.coingecko.com/api/v3/simple/price?ids=${currencyNameMap[currency]}&vs_currencies=usd`
+`https://api.coingecko.com/api/v3/simple/price?ids=bitnet-io&vs_currencies=usd`
   );
   return resp.data;
 }

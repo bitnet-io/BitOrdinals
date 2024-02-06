@@ -1,4 +1,4 @@
-import { BTC_P2WPKH_DUST_AMOUNT } from '@shared/constants';
+import { BIT_P2WPKH_DUST_AMOUNT } from '@shared/constants';
 import { isDefined } from '@shared/utils';
 
 import { sumNumbers } from '@app/common/math/helpers';
@@ -57,7 +57,7 @@ export function selectInscriptionTransferCoins(
   }
 
   let utxos = nativeSegwitUtxos
-    .filter(utxo => utxo.value >= BTC_P2WPKH_DUST_AMOUNT)
+    .filter(utxo => utxo.value >= BIT_P2WPKH_DUST_AMOUNT)
     .sort((a, b) => b.value - a.value);
   let txSize = null;
 

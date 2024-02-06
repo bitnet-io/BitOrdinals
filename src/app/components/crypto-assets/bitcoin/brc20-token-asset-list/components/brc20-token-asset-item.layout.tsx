@@ -26,7 +26,7 @@ export function Brc20TokenAssetItemLayout({
     <BasicTooltip
       asChild
       disabled={!displayNotEnoughBalance}
-      label="Not enough BTC in balance"
+      label="Not enough BIT in balance"
       side="top"
     >
       <ItemInteractive onClick={onClick}>

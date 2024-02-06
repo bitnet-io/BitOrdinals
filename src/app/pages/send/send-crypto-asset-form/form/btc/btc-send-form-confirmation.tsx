@@ -33,7 +33,7 @@ import { Button } from '@app/ui/components/button/button';
 
 import { useSendFormNavigate } from '../../hooks/use-send-form-navigate';
 
-const symbol: CryptoCurrencies = 'BTC';
+const symbol: CryptoCurrencies = 'BIT';
 
 function useBtcSendFormConfirmationState() {
   const location = useLocation();
@@ -53,7 +53,7 @@ export function BtcSendFormConfirmation() {
   const { refetch } = useCurrentNativeSegwitUtxos();
   const analytics = useAnalytics();
 
-  const btcMarketData = useCryptoCurrencyMarketData('BTC');
+  const btcMarketData = useCryptoCurrencyMarketData('BIT');
   const { broadcastTx, isBroadcasting } = useBitcoinBroadcastTransaction();
 
   const transaction = btc.Transaction.fromRaw(hexToBytes(tx));

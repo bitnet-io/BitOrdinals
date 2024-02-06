@@ -23,7 +23,7 @@ export function RetrieveTaprootToNativeSegwitLayout(
           Retrieve Bitcoin deposited to <br /> Taproot addresses
         </styled.span>
         <styled.span mt="space.05" textStyle="body.02">
-          Taproot addresses are used by Leather for Ordinal inscriptions, but they can also contain
+          Taproot addresses are used by Leather for BitOrdinal inscriptions, but they can also contain
           bitcoin.
         </styled.span>
         <styled.span mt="space.04" textStyle="body.02">

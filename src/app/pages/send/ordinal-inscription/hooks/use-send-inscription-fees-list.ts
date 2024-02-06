@@ -22,13 +22,13 @@ export function useSendInscriptionFeesList({ recipient, utxo }: UseSendInscripti
   const createNativeSegwitSigner = useCurrentAccountNativeSegwitSigner();
   const { data: nativeSegwitUtxos } = useCurrentNativeSegwitUtxos();
 
-  const btcMarketData = useCryptoCurrencyMarketData('BTC');
+  const btcMarketData = useCryptoCurrencyMarketData('BIT');
   const { data: feeRates, isLoading } = useAverageBitcoinFeeRates();
 
   const feesList: FeesListItem[] = useMemo(() => {
     function getFiatFeeValue(fee: number) {
       return `~ ${i18nFormatCurrency(
-        baseCurrencyAmountInQuote(createMoney(Math.ceil(fee), 'BTC'), btcMarketData)
+        baseCurrencyAmountInQuote(createMoney(Math.ceil(fee), 'BIT'), btcMarketData)
       )}`;
     }
 
@@ -70,7 +70,7 @@ export function useSendInscriptionFeesList({ recipient, utxo }: UseSendInscripti
       {
         label: BtcFeeType.High,
         value: highFeeValue,
-        btcValue: formatMoneyPadded(createMoney(highFeeValue, 'BTC')),
+        btcValue: formatMoneyPadded(createMoney(highFeeValue, 'BIT')),
         time: btcTxTimeMap.fastestFee,
         fiatValue: getFiatFeeValue(highFeeValue),
         feeRate: feeRates.fastestFee.toNumber(),
@@ -78,7 +78,7 @@ export function useSendInscriptionFeesList({ recipient, utxo }: UseSendInscripti
       {
         label: BtcFeeType.Standard,
         value: standardFeeValue,
-        btcValue: formatMoneyPadded(createMoney(standardFeeValue, 'BTC')),
+        btcValue: formatMoneyPadded(createMoney(standardFeeValue, 'BIT')),
         time: btcTxTimeMap.halfHourFee,
         fiatValue: getFiatFeeValue(standardFeeValue),
         feeRate: feeRates.halfHourFee.toNumber(),
@@ -86,7 +86,7 @@ export function useSendInscriptionFeesList({ recipient, utxo }: UseSendInscripti
       {
         label: BtcFeeType.Low,
         value: lowFeeValue,
-        btcValue: formatMoneyPadded(createMoney(lowFeeValue, 'BTC')),
+        btcValue: formatMoneyPadded(createMoney(lowFeeValue, 'BIT')),
         time: btcTxTimeMap.hourFee,
         fiatValue: getFiatFeeValue(lowFeeValue),
         feeRate: feeRates.hourFee.toNumber(),

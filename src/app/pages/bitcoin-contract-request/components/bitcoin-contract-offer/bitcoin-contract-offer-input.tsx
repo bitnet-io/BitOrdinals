@@ -21,7 +21,7 @@ export function BitcoinContractOfferInput({
   const calculateFiatValue = useCalculateBitcoinFiatValue();
 
   const bitcoinValue = satToBtc(bitcoinContractOffer.bitcoinContractCollateralAmount);
-  const money = createMoneyFromDecimal(bitcoinValue, 'BTC');
+  const money = createMoneyFromDecimal(bitcoinValue, 'BIT');
   const fiatValue = calculateFiatValue(money);
   const formattedBitcoinValue = formatMoney(money);
   const formattedFiatValue = i18nFormatCurrency(fiatValue);

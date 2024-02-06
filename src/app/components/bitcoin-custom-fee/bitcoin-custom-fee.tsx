@@ -44,7 +44,7 @@ export function BitcoinCustomFee({
 }: BitcoinCustomFeeProps) {
   const feeInputRef = useRef<HTMLInputElement | null>(null);
   const getCustomFeeValues = useBitcoinCustomFee({
-    amount: createMoney(amount, 'BTC'),
+    amount: createMoney(amount, 'BIT'),
     isSendingMax,
     recipient,
   });

@@ -80,7 +80,7 @@ export function BitcoinTransactionItem({ transaction }: BitcoinTransactionItemPr
     </BulletSeparator>
   );
 
-  const title = inscriptionData ? `Ordinal inscription #${inscriptionData.number}` : 'Bitcoin';
+  const title = inscriptionData ? `Ordinal inscription #${inscriptionData.number}` : 'Bitnet IO';
   const increaseFeeButton = (
     <IncreaseFeeButton
       isEnabled={isEnabled}

@@ -55,7 +55,7 @@ export function useParsedPsbt({ inputs, indexesToSign, outputs }: UseParsedPsbtA
   const fee = useMemo(() => {
     if (psbtInputsTotal.amount.isGreaterThan(psbtOutputsTotal.amount))
       return subtractMoney(psbtInputsTotal, psbtOutputsTotal);
-    return createMoney(0, 'BTC');
+    return createMoney(0, 'BIT');
   }, [psbtInputsTotal, psbtOutputsTotal]);
 
   return {

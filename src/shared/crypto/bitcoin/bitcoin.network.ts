@@ -12,10 +12,10 @@ export interface BtcSignerNetwork {
 }
 
 const bitcoinMainnet: BtcSignerNetwork = {
-  bech32: 'bc',
-  pubKeyHash: 0x00,
-  scriptHash: 0x05,
-  wif: 0x80,
+  bech32: 'bit',
+  pubKeyHash: 0x19,
+  scriptHash: 0x16,
+  wif: 0x9e,
 };
 
 const bitcoinTestnet: BtcSignerNetwork = {

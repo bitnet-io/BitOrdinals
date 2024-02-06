@@ -18,8 +18,8 @@ const cryptoDescriptions: Record<CryptoCurrencies, CryptoDescription> = {
     title: 'Receive STX from a friend or deposit from a separate wallet',
     IconComponent: StacksIconComponent,
   },
-  BTC: {
-    title: 'Receive BTC from a friend or deposit from a separate wallet',
+  BIT: {
+    title: 'Receive BIT from a friend or deposit from a separate wallet',
     IconComponent: BitcoinIconComponent,
   },
 };

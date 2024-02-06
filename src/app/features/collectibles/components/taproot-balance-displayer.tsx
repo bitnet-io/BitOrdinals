@@ -5,7 +5,7 @@ import { Link } from '@app/ui/components/link/link';
 import { BasicTooltip } from '@app/ui/components/tooltip/basic-tooltip';
 
 const taprootSpendNotSupportedYetMsg = `
-  Total amount of BTC in your Taproot account addresses. Click to
+  Total amount of BIT in your Taproot account addresses. Click to
   retrieve these funds.
 `;
 

@@ -140,8 +140,8 @@ export async function fetchNameOwner(client: StacksClient, name: string, isTestn
 }
 
 /**
- * Fetch the zonefile-based BTC address for a specific name.
- * The BTC address is found via the `_btc._addr` TXT record,
+ * Fetch the zonefile-based BIT address for a specific name.
+ * The BIT address is found via the `_btc._addr` TXT record,
  * as specified in https://www.newinternetlabs.com/blog/standardizing-names-for-bitcoin-addresses/
  *
  * The value returned from this function is not validated.

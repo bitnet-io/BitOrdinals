@@ -8,18 +8,18 @@ export const POPUP_CENTER_WIDTH = 442;
 export const POPUP_CENTER_HEIGHT = 646;
 
 export const HIGH_FEE_AMOUNT_STX = 5;
-export const HIGH_FEE_WARNING_LEARN_MORE_URL_BTC = 'https://bitcoinfees.earn.com/';
+export const HIGH_FEE_WARNING_LEARN_MORE_URL_BIT = 'https://bitcoinfees.earn.com/';
 export const HIGH_FEE_WARNING_LEARN_MORE_URL_STX = 'https://hiro.so/questions/fee-estimates';
 
 export const DEFAULT_FEE_RATE = 400;
 
 export const PERSISTENCE_CACHE_TIME = 1000 * 60 * 60 * 12; // 12 hours
 
-export const BTC_DECIMALS = 8;
+export const BIT_DECIMALS = 8;
 export const STX_DECIMALS = 6;
 
 // https://bitcoin.stackexchange.com/a/41082/139277
-export const BTC_P2WPKH_DUST_AMOUNT = 294;
+export const BIT_P2WPKH_DUST_AMOUNT = 294;
 
 export const KEBAB_REGEX = /[A-Z\u00C0-\u00D6\u00D8-\u00DE]/g;
 
@@ -28,10 +28,10 @@ export const GITHUB_REPO = 'extension';
 
 export enum WalletDefaultNetworkConfigurationIds {
   mainnet = 'mainnet',
-  testnet = 'testnet',
-  signet = 'signet',
-  sbtcDevenv = 'sbtcDevenv',
-  devnet = 'devnet',
+//  testnet = 'testnet',
+//  signet = 'signet',
+//  sbtcDevenv = 'sbtcDevenv',
+//  devnet = 'devnet',
 }
 
 export type DefaultNetworkConfigurations = keyof typeof WalletDefaultNetworkConfigurationIds;
@@ -40,7 +40,7 @@ const supportedBlockchains = ['stacks', 'bitcoin'] as const;
 
 export type SupportedBlockchains = (typeof supportedBlockchains)[number];
 
-const networkModes = ['mainnet', 'testnet'] as const;
+const networkModes = ['mainnet'] as const;
 
 export type NetworkModes = (typeof networkModes)[number];
 
@@ -76,13 +76,14 @@ export interface NetworkConfiguration {
   };
 }
 
-export const HIRO_API_BASE_URL_MAINNET = 'https://api.hiro.so';
-export const HIRO_API_BASE_URL_TESTNET = 'https://api.testnet.hiro.so';
-export const HIRO_INSCRIPTIONS_API_URL = 'https://api.hiro.so/ordinals/v1/inscriptions';
+export const HIRO_API_BASE_URL_MAINNET = 'https://bitnft.io';
+export const HIRO_API_BASE_URL_TESTNET = 'https://bitnft.io';
+export const HIRO_INSCRIPTIONS_API_URL = 'https://bitnft.io/ordinals/v1/inscriptions';
 
-export const BITCOIN_API_BASE_URL_MAINNET = 'https://blockstream.info/api';
-export const BITCOIN_API_BASE_URL_TESTNET = 'https://blockstream.info/testnet/api';
-const BITCOIN_API_BASE_URL_SIGNET = 'https://mempool.space/signet/api';
+export const BITCOIN_API_BASE_URL_MAINNET = 'https://bitexplorer.io/api';
+//export const BITCOIN_API_BASE_URL_MAINNET = 'https://bitexplorer.io/api';
+export const BITCOIN_API_BASE_URL_TESTNET = 'https://bitexplorer.io/api';
+const BITCOIN_API_BASE_URL_SIGNET = 'https://bitexplorer.io/api';
 
 const networkMainnet: NetworkConfiguration = {
   id: WalletDefaultNetworkConfigurationIds.mainnet,
@@ -137,7 +138,7 @@ const networkSignet: NetworkConfiguration = {
 
 const networkSbtcDevenv: NetworkConfiguration = {
   id: WalletDefaultNetworkConfigurationIds.sbtcDevenv,
-  name: 'sBTC Devenv',
+  name: 'sBIT Devenv',
   chain: {
     stacks: {
       blockchain: 'stacks',

@@ -13,7 +13,7 @@ import { useRpcSendTransfer } from './use-rpc-send-transfer';
 export function RpcSendTransfer() {
   const nativeSegwitSigner = useCurrentAccountNativeSegwitIndexZeroSigner();
   const { address, amount, onChooseTransferFee, origin } = useRpcSendTransfer();
-  const amountAsMoney = createMoney(new BigNumber(amount), 'BTC');
+  const amountAsMoney = createMoney(new BigNumber(amount), 'BIT');
   const formattedMoney = formatMoneyPadded(amountAsMoney);
 
   return (

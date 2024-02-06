@@ -14,7 +14,7 @@ export function PsbtInputItem({ utxo }: { utxo: PsbtInput }) {
     <PsbtInputOutputItemLayout
       address={truncateMiddle(utxo.address)}
       addressHoverLabel={utxo.address}
-      amount={formatMoney(createMoney(utxo.value, 'BTC'))}
+      amount={formatMoney(createMoney(utxo.value, 'BIT'))}
       label={utxo.toSign ? <Pill hoverLabel={pillHoverLabel} label="Approve" /> : undefined}
       txId={truncateMiddle(utxo.txid)}
       txIdHoverLabel={utxo.txid}

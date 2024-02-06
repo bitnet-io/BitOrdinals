@@ -17,14 +17,14 @@ export function useGetBitcoinContractsBalance() {
   return useMemo(() => {
     if (isUndefined(bitcoinContractsBalance))
       return {
-        bitcoinContractsBalance: createMoney(new BigNumber(0), 'BTC'),
+        bitcoinContractsBalance: createMoney(new BigNumber(0), 'BIT'),
         bitcoinContractsBalanceInUSD: i18nFormatCurrency(createMoney(new BigNumber(0), 'USD')),
         isLoading,
       };
     return {
       bitcoinContractsBalance,
       bitcoinContractsBalanceInUSD: i18nFormatCurrency(
-        calculateFiatValue(createMoney(bitcoinContractsBalance.amount, 'BTC'))
+        calculateFiatValue(createMoney(bitcoinContractsBalance.amount, 'BIT'))
       ),
       isLoading,
     };

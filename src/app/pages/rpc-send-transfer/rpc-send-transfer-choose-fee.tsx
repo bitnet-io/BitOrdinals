@@ -22,7 +22,7 @@ import { useRpcSendTransferState } from './rpc-send-transfer-container';
 
 function useRpcSendTransferFeeState() {
   const amount = useLocationStateWithCache('amount');
-  const amountAsMoney = createMoney(Number(amount), 'BTC');
+  const amountAsMoney = createMoney(Number(amount), 'BIT');
   const utxos = useLocationStateWithCache('utxos') as UtxoResponseItem[];
   const address = useLocationStateWithCache('address') as string;
 

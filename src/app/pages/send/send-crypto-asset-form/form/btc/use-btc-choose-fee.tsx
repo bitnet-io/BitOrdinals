@@ -23,7 +23,7 @@ export function useBtcChooseFee() {
   const { setSelectedFeeType } = useSendBitcoinAssetContextState();
   const calcMaxSpend = useCalculateMaxBitcoinSpend();
   const signTx = useSignBitcoinTx();
-  const amountAsMoney = createMoney(btcToSat(txValues.amount).toNumber(), 'BTC');
+  const amountAsMoney = createMoney(btcToSat(txValues.amount).toNumber(), 'BIT');
 
   return {
     amountAsMoney,

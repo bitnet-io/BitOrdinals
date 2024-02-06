@@ -13,8 +13,8 @@ export function sortSwappableAssetsBySymbol(swappableAssets: SwapAsset[]) {
       return 0;
     })
     .sort((a, b) => {
-      if (a.name === 'BTC') return -1;
-      if (b.name !== 'BTC') return 1;
+      if (a.name === 'BIT') return -1;
+      if (b.name !== 'BIT') return 1;
       return 0;
     });
 }

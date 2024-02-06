@@ -4,7 +4,7 @@ import { SendCryptoAssetSelectors } from '@tests/selectors/send.selectors';
 import { Form, Formik } from 'formik';
 import { Box } from 'leather-styles/jsx';
 
-import { HIGH_FEE_WARNING_LEARN_MORE_URL_BTC } from '@shared/constants';
+import { HIGH_FEE_WARNING_LEARN_MORE_URL_BIT } from '@shared/constants';
 import { CryptoCurrencies } from '@shared/models/currencies.model';
 
 import { HighFeeDrawer } from '@app/features/high-fee-drawer/high-fee-drawer';
@@ -25,7 +25,7 @@ import { useSendFormRouteState } from '../../hooks/use-send-form-route-state';
 import { createDefaultInitialFormValues, defaultSendFormFormikProps } from '../../send-form.utils';
 import { useBtcSendForm } from './use-btc-send-form';
 
-const symbol: CryptoCurrencies = 'BTC';
+const symbol: CryptoCurrencies = 'BIT';
 
 export function BtcSendForm() {
   const routeState = useSendFormRouteState();
@@ -93,7 +93,7 @@ export function BtcSendForm() {
                 {currentNetwork.chain.bitcoin.bitcoinNetwork === 'testnet' && <TestnetBtcMessage />}
               </SendCryptoAssetFormLayout>
               <FormFooter balance={btcBalance.balance} />
-              <HighFeeDrawer learnMoreUrl={HIGH_FEE_WARNING_LEARN_MORE_URL_BTC} />
+              <HighFeeDrawer learnMoreUrl={HIGH_FEE_WARNING_LEARN_MORE_URL_BIT} />
               <Outlet />
 
               {/* This is for testing purposes only, to make sure the form is ready to be submitted. */}

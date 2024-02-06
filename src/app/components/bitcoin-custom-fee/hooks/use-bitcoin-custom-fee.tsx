@@ -22,7 +22,7 @@ interface UseBitcoinCustomFeeArgs {
 export function useBitcoinCustomFee({ amount, isSendingMax, recipient }: UseBitcoinCustomFeeArgs) {
   const balance = useCurrentNativeSegwitAddressBalance();
   const { data: utxos = [] } = useCurrentNativeSegwitUtxos();
-  const btcMarketData = useCryptoCurrencyMarketData('BTC');
+  const btcMarketData = useCryptoCurrencyMarketData('BIT');
 
   return useCallback(
     (feeRate: number) => {
@@ -43,7 +43,7 @@ export function useBitcoinCustomFee({ amount, isSendingMax, recipient }: UseBitc
       return {
         fee,
         fiatFeeValue: `~ ${i18nFormatCurrency(
-          baseCurrencyAmountInQuote(createMoney(Math.ceil(fee), 'BTC'), btcMarketData)
+          baseCurrencyAmountInQuote(createMoney(Math.ceil(fee), 'BIT'), btcMarketData)
         )}`,
       };
     },

@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-import { BTC_DECIMALS, STX_DECIMALS } from '@shared/constants';
+import { BIT_DECIMALS, STX_DECIMALS } from '@shared/constants';
 import { isNumber } from '@shared/utils';
 
 import { FormErrorMessages } from '@app/common/error-messages';
@@ -28,7 +28,7 @@ function currencyPrecisionValidatorFactory(precision: number, errorMessage: stri
 }
 
 export function btcAmountPrecisionValidator(errorMsg: string) {
-  return currencyPrecisionValidatorFactory(BTC_DECIMALS, errorMsg);
+  return currencyPrecisionValidatorFactory(BIT_DECIMALS, errorMsg);
 }
 
 export function stxAmountPrecisionValidator(errorMsg: string) {

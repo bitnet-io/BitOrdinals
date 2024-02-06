@@ -44,7 +44,7 @@ export function FeesListItem({
           textStyle="caption.02"
           data-testid={SharedComponentsSelectors.FeesListItemFeeValue}
         >
-          {`${feeFiatValue} | ${feeRate} sats/vB | ${feeAmount}`}
+          {`${feeFiatValue} | ${feeRate} radiowaves/vB | ${feeAmount}`}
         </styled.span>
       </Flex>
     </styled.button>

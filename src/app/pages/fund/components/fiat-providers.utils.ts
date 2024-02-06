@@ -62,17 +62,9 @@ function makeMoonPayUrl(address: string, symbol: CryptoCurrencies) {
   return `https://buy.moonpay.com?apiKey=${MOONPAY_API_KEY}&currencyCode=${code}&walletAddress=${address}`;
 }
 
-function makeTransakUrl(address: string, symbol: CryptoCurrencies) {
-  const screenTitle = 'Buy Stacks';
-  const code = symbol.toUpperCase();
-
-  return `https://global.transak.com?apiKey=${TRANSAK_API_KEY}&cryptoCurrencyCode=${code}&exchangeScreenTitle=${encodeURI(
-    screenTitle
-  )}&defaultPaymentMethod=credit_debit_card&walletAddress=${address}`;
-}
 
 function makeFiatProviderFaqUrl(address: string, provider: string) {
-  // TODO: Add FAQ for BTC
+  // TODO: Add FAQ for BIT
   return `https://hiro.so/wallet-faq/how-do-i-buy-stx-from-an-exchange?provider=${provider}&address=${address}`;
 }
 

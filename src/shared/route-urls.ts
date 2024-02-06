@@ -60,15 +60,15 @@ export enum RouteUrls {
 
   // Send crypto asset routes
   SendCryptoAsset = '/send',
-  SendCryptoAssetForm = '/send/:symbol',
-  SendSip10Form = '/send/:symbol/:contractId',
+  SendCryptoAssetForm = '/send/btc',
+  SendSip10Form = '/send/btc/:contractId',
   SendCryptoAssetFormRecipientAccounts = 'recipient-accounts',
   SendCryptoAssetFormRecipientBns = 'recipient-bns',
   SendBtcChooseFee = '/send/btc/choose-fee',
   SendBtcConfirmation = '/send/btc/confirm',
   SendBtcDisabled = '/send/btc/disabled',
   SendStxConfirmation = '/send/stx/confirm',
-  SendStacksSip10Confirmation = '/send/:symbol/confirm',
+  SendStacksSip10Confirmation = '/send/btc/confirm',
   SentBtcTxSummary = '/sent/btc/:txId',
   SentStxTxSummary = '/sent/stx/:txId',
   SendBrc20SendForm = '/send/brc20/:ticker',

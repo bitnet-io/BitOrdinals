@@ -10,10 +10,7 @@ import { isMoney } from './is-money';
 
 export function baseCurrencyAmountInQuote(quantity: Money, { pair, price }: MarketData) {
   if (quantity.symbol !== pair.base)
-    throw new Error(
-      `Cannot calculate value of ${formatMoney(quantity)} with market pair of ${formatMarketPair(
-        pair
-      )}`
+    throw new Error(`Cannot calculate value of ${formatMoney(quantity)} with market pair of ${formatMarketPair(pair)}`
     );
 
   return createMoney(
@@ -27,7 +24,7 @@ export function baseCurrencyAmountInQuote(quantity: Money, { pair, price }: Mark
 
 export function convertAmountToFractionalUnit(num: Money | BigNumber, decimals?: number) {
   if (isMoney(num)) return num.amount.shiftedBy(num.decimals);
-  if (!isNumber(decimals)) throw new Error('Must define decimal of given currency');
+//  if (!isNumber(decimals)) throw new Error('Must define decimal of given currency');
   return num.shiftedBy(decimals);
 }
 

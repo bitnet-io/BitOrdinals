@@ -35,7 +35,7 @@ export function BitcoinContractLockAmount({
   return (
     <Flag img={image || <BtcIcon />} width="100%">
       <HStack alignItems="center" justifyContent="space-between">
-        <styled.span textStyle="label.01">{title ? title : 'BTC'}</styled.span>
+        <styled.span textStyle="label.01">{title ? title : 'BIT'}</styled.span>
         <styled.span
           data-testid={BitcoinContractRequestSelectors.BitcoinContractLockAmount}
           textStyle="label.01"

@@ -27,7 +27,7 @@ export function InscriptionText({
       onClickCallToAction={onClickCallToAction}
       onClickSend={onClickSend}
       content={parseJson(query.data)}
-      subtitle="Ordinal inscription"
+      subtitle="BitOrdinal inscription"
       title={`# ${inscriptionNumber}`}
     />
   );

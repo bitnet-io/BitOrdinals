@@ -21,13 +21,13 @@ export function useGenerateRetrieveTaprootFundsTx() {
   const getNumberOfInscriptionOnUtxo = useNumberOfInscriptionsOnUtxo();
 
   const fee = useMemo(() => {
-    if (!feeRates) return createMoney(0, 'BTC');
+    if (!feeRates) return createMoney(0, 'BIT');
     const txSizer = new BtcSizeFeeEstimator();
     const { txVBytes } = txSizer.calcTxSize({
       input_count: uninscribedUtxos.length,
       p2wpkh_output_count: 1,
     });
-    return createMoney(Math.ceil(txVBytes * feeRates.hourFee.toNumber()), 'BTC');
+    return createMoney(Math.ceil(txVBytes * feeRates.hourFee.toNumber()), 'BIT');
   }, [feeRates, uninscribedUtxos.length]);
 
   const generateRetrieveTaprootFundsTx = useCallback(

@@ -46,7 +46,7 @@ export function useBtcIncreaseFee(btcTx: BitcoinTx) {
   const { btcAvailableAssetBalance } = useBtcAssetBalance(currentBitcoinAddress);
   const sendingAmount = getBitcoinTxValue(currentBitcoinAddress, btcTx);
   const { feesList } = useBitcoinFeesList({
-    amount: createMoney(btcToSat(sendingAmount), 'BTC'),
+    amount: createMoney(btcToSat(sendingAmount), 'BIT'),
     isSendingMax: false,
     recipient,
     utxos,

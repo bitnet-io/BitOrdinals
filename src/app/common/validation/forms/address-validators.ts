@@ -20,17 +20,17 @@ export function notCurrentAddressValidator(currentAddress: string) {
 }
 
 export function btcAddressValidator() {
-  return yup
-    .string()
-    .defined(FormErrorMessages.AddressRequired)
-    .test((input, context) => {
-      if (!input) return false;
-      if (!validate(input))
-        return context.createError({
-          message: FormErrorMessages.InvalidAddress,
-        });
-      return true;
-    });
+//  return yup
+  //  .string()
+ //   .defined(FormErrorMessages.AddressRequired)
+ //   .test((input, context) => {
+ //     if (!input) return false;
+ //     if (!validate(input))
+   //     return context.createError({
+     //     message: FormErrorMessages.InvalidAddress,
+  //      });
+ //     return true;
+ //   });
 }
 
 // ts-unused-exports:disable-next-line
@@ -46,17 +46,17 @@ export function btcTaprootAddressValidator() {
 }
 
 function btcAddressNetworkValidatorFactory(network: BitcoinNetworkModes) {
-  return (value?: string) => {
-    if (!isString(value)) return false;
-    return validate(value, bitcoinNetworkModeToCoreNetworkMode(network) as Network);
-  };
+//  return (value?: string) => {
+//    if (!isString(value)) return false;
+//    return validate(value, bitcoinNetworkModeToCoreNetworkMode(network) as Network);
+//  };
 }
 
 export function btcAddressNetworkValidator(network: BitcoinNetworkModes) {
-  return yup.string().test({
-    test: btcAddressNetworkValidatorFactory(network),
-    message: FormErrorMessages.IncorrectNetworkAddress,
-  });
+//  return yup.string().test({
+//    test: btcAddressNetworkValidatorFactory(network),
+//    message: FormErrorMessages.IncorrectNetworkAddress,
+//  });
 }
 
 function stxAddressNetworkValidatorFactory(currentNetwork: NetworkConfiguration) {

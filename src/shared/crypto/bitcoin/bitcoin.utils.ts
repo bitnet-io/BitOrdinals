@@ -266,7 +266,7 @@ export function getInputPaymentType(
 ): PaymentTypes {
   const address = getBitcoinInputAddress(index, input, getBtcSignerLibNetworkConfigByMode(network));
   if (address === '') throw new Error('Input address cannot be empty');
-  if (address.startsWith('bc1p') || address.startsWith('tb1p')) return 'p2tr';
-  if (address.startsWith('bc1q') || address.startsWith('tb1q')) return 'p2wpkh';
+  if (address.startsWith('bit1p') || address.startsWith('tb1p')) return 'p2tr';
+  if (address.startsWith('bit1q') || address.startsWith('tb1q')) return 'p2wpkh';
   throw new Error('Unable to infer payment type from input address');
 }

@@ -49,7 +49,7 @@ export function SendInscriptionChooseFee() {
     <>
       <BaseDrawer title="Choose fee" isShowing enableGoBack onClose={() => navigate(-1)}>
         <BitcoinChooseFee
-          amount={createMoney(0, 'BTC')}
+          amount={createMoney(0, 'BIT')}
           feesList={
             <BitcoinFeesList
               feesList={feesList}

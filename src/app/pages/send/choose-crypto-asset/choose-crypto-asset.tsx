@@ -38,9 +38,9 @@ export function ChooseCryptoAsset() {
         return navigate('..');
       }
       const contractId = `${asset.contractId.split('::')[0]}`;
-      return navigate(`${RouteUrls.SendCryptoAsset}/${symbol}/${contractId}`);
+      return navigate(`${RouteUrls.SendCryptoAsset}/btc/${contractId}`);
     }
-    navigate(`${RouteUrls.SendCryptoAsset}/${symbol}`);
+    navigate(`${RouteUrls.SendCryptoAsset}/btc`);
   }
 
   return (

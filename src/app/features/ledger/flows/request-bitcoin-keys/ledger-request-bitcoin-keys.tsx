@@ -28,7 +28,7 @@ function LedgerRequestBitcoinKeys() {
     connectApp: connectLedgerBitcoinApp(network.chain.bitcoin.bitcoinNetwork),
     getAppVersion: getBitcoinAppVersion,
     isAppOpen({ name }: { name: string }) {
-      return name === 'Bitcoin' || name === 'Bitcoin Test';
+      return name === 'Bitnet IO' || name === 'Bitcoin Test';
     },
     onSuccess() {
       navigate('/', { replace: true });

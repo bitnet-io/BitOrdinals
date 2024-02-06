@@ -24,7 +24,7 @@ export function calculateMaxBitcoinSpend({
   if (!utxos.length || !fetchedFeeRates)
     return {
       spendAllFee: 0,
-      amount: createMoney(0, 'BTC'),
+      amount: createMoney(0, 'BIT'),
       spendableBitcoin: new BigNumber(0),
     };
 
@@ -44,7 +44,7 @@ export function calculateMaxBitcoinSpend({
 
   return {
     spendAllFee: fee,
-    amount: createMoney(spendableAmount, 'BTC'),
+    amount: createMoney(spendableAmount, 'BIT'),
     spendableBitcoin: satToBtc(spendableAmount),
   };
 }

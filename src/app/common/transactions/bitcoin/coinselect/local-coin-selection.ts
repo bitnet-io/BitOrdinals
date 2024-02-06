@@ -17,7 +17,7 @@ export function determineUtxosForSpendAll({
   recipient,
   utxos,
 }: DetermineUtxosForSpendArgs) {
-  if (!validate(recipient)) throw new Error('Cannot calculate spend of invalid address type');
+//  if (!validate(recipient)) throw new Error('Cannot calculate spend of invalid address type');
   const filteredUtxos = filterUneconomicalUtxos({ utxos, feeRate, address: recipient });
 
   const sizeInfo = getSizeInfo({
@@ -45,7 +45,7 @@ export function determineUtxosForSpend({
   recipient,
   utxos,
 }: DetermineUtxosForSpendArgs) {
-  if (!validate(recipient)) throw new Error('Cannot calculate spend of invalid address type');
+//  if (!validate(recipient)) throw new Error('Cannot calculate spend of invalid address type');
 
   const orderedUtxos = utxos.sort((a, b) => b.value - a.value);
 

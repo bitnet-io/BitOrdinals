@@ -35,7 +35,7 @@ export function Inscription({ rawInscription }: InscriptionProps) {
           key={inscription.title}
           onClickCallToAction={() => openInNewTab(inscription.infoUrl)}
           onClickSend={() => openSendInscriptionModal()}
-          subtitle="Ordinal inscription"
+          subtitle="BitOrdinal inscription"
           title={`# ${inscription.number}`}
         />
       );
@@ -49,7 +49,7 @@ export function Inscription({ rawInscription }: InscriptionProps) {
           onClickCallToAction={() => openInNewTab(inscription.infoUrl)}
           onClickSend={() => openSendInscriptionModal()}
           src={inscription.src}
-          subtitle="Ordinal inscription"
+          subtitle="BitOrdinal inscription"
           title={`# ${inscription.number}`}
         />
       );
@@ -61,7 +61,7 @@ export function Inscription({ rawInscription }: InscriptionProps) {
           onClickCallToAction={() => openInNewTab(inscription.infoUrl)}
           onClickSend={() => openSendInscriptionModal()}
           src={inscription.src}
-          subtitle="Ordinal inscription"
+          subtitle="BitOrdinal inscription"
           title={`# ${inscription.number}`}
         />
       );
@@ -80,7 +80,7 @@ export function Inscription({ rawInscription }: InscriptionProps) {
           key={inscription.title}
           onClickCallToAction={() => openInNewTab(inscription.infoUrl)}
           onClickSend={() => openSendInscriptionModal()}
-          subtitle="Ordinal inscription"
+          subtitle="BitOrdinal inscription"
           title={`# ${inscription.number}`}
         >
           <OrdinalIcon />

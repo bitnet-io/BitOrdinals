@@ -22,7 +22,7 @@ export function BitcoinCustomFeeFiat({
 }: BitcoinCustomFeeFiatProps) {
   const [field] = useField('feeRate');
   const getCustomFeeValues = useBitcoinCustomFee({
-    amount: createMoney(amount, 'BTC'),
+    amount: createMoney(amount, 'BIT'),
     isSendingMax,
     recipient,
   });
@@ -43,7 +43,7 @@ export function BitcoinCustomFeeFiat({
         {feeData.fiatFeeValue}
       </styled.span>
       <styled.span color="accent.text-subdued" textStyle="body.02">
-        {feeData.feeInBtc} BTC
+        {feeData.feeInBtc} BIT
       </styled.span>
     </Flex>
   );

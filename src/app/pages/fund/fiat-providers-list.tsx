@@ -32,10 +32,8 @@ export function FiatProvidersList(props: FiatProvidersProps) {
 
   const routeToQr = useMemo(() => {
     switch (symbol) {
-      case 'BTC':
+      case 'BIT':
         return RouteUrls.ReceiveBtc;
-      case 'STX':
-        return RouteUrls.ReceiveStx;
     }
   }, [symbol]);
 

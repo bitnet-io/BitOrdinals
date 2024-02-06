@@ -29,7 +29,7 @@ export const AccountListItem = memo(({ index, stacksAccount, onClose }: AccountL
   const bitcoinAddress = bitcoinSigner?.(0).address || '';
 
   const onSelectAccount = () => {
-    const isBitcoin = values.symbol === 'BTC';
+    const isBitcoin = values.symbol === 'BIT';
     void setFieldValue('recipient', isBitcoin ? bitcoinAddress : stacksAddress, false);
     void setFieldTouched('recipient', false);
     onClose();

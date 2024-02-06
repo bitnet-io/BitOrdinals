@@ -30,7 +30,7 @@ export function PsbtAddressTotalItem({
   return (
     <Flag img={image ? image : <BtcIcon />} mt="space.05" spacing="space.04">
       <HStack alignItems="center" justifyContent="space-between">
-        <styled.span textStyle="label.01">{title ? title : 'Bitcoin'}</styled.span>
+        <styled.span textStyle="label.01">{title ? title : 'Bitnet IO'}</styled.span>
         {valueAction ? (
           <Link onClick={valueAction}>{value}</Link>
         ) : (

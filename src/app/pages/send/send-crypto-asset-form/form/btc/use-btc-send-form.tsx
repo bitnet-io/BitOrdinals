@@ -75,7 +75,7 @@ export function useBtcSendForm() {
         .concat(btcAddressValidator())
         .concat(btcAddressNetworkValidator(currentNetwork.chain.bitcoin.bitcoinNetwork))
         .concat(notCurrentAddressValidator(nativeSegwitSigner.address || ''))
-        .required('Enter a bitcoin address'),
+        .required('Enter a Bitnet IO (BIT) address'),
     }),
 
     async chooseTransactionFee(
